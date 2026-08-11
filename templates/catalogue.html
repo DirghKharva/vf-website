@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Catalogue{% endblock %}
+{% block meta_desc %}Download the VF Agri Export product catalogue or request it via email. Detailed specifications for all fresh vegetables, fruits, and salt products.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="Catalogue page header">
+  <div class="container">
+    <span class="page-hero-label">Product Catalogue</span>
+    <h1 class="page-hero-title">Our Catalogue</h1>
+    <p class="page-hero-subtitle">Detailed product specifications, grades, and packaging information in one document.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Catalogue</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ CATALOGUE OPTIONS ══════ -->
+<section class="section section-cream" aria-labelledby="catalogue-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Product Information</span>
+      <h2 class="section-title" id="catalogue-heading">Access Our Product Catalogue</h2>
+      <p class="section-subtitle">
+        Our catalogue contains detailed product specifications, available grades, packaging formats, and seasonal availability for all our export products.
+      </p>
+    </div>
+
+    <div class="catalogue-grid">
+
+      <!-- PDF Download -->
+      <div class="catalogue-option reveal d1" id="catalogue-pdf">
+        <div class="catalogue-icon">📄</div>
+        <h3 class="catalogue-title">Download PDF Catalogue</h3>
+        <p class="catalogue-desc">
+          Get our complete product catalogue as a PDF document. Includes all product categories, specifications, grades, and packaging options.
+        </p>
+        <a href="#" class="btn btn-green btn-lg" id="pdf-download-btn">
+          Download Catalogue
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>
+        <p style="margin-top:1rem; font-size:var(--text-xs); color:var(--text-muted);">
+          PDF will be updated as product availability changes. Last updated: 2025.
+        </p>
+      </div>
+
+      <!-- Email Request -->
+      <div class="catalogue-option reveal d2" id="catalogue-email">
+        <div class="catalogue-icon">📧</div>
+        <h3 class="catalogue-title">Request via Email</h3>
+        <p class="catalogue-desc">
+          Prefer a personalized catalogue with specific products? Send us your requirements and we'll share a tailored catalogue directly to your inbox.
+        </p>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-dark btn-lg" id="catalogue-contact-btn">
+          Send Request
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+        <p style="margin-top:1rem; font-size:var(--text-xs); color:var(--text-muted);">
+          We respond within 24 hours with catalogue and pricing information.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ WHAT'S INSIDE ══════ -->
+<section class="section section-white" aria-labelledby="inside-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Catalogue Contents</span>
+      <h2 class="section-title" id="inside-heading">What's Inside</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal d1">
+        <div class="feature-icon">🥦</div>
+        <h3 class="feature-title">Fresh Vegetables</h3>
+        <p class="feature-desc">Complete list of vegetable varieties, grades, minimum order quantities, and seasonal availability chart.</p>
+      </div>
+      <div class="feature-card reveal d2">
+        <div class="feature-icon">🍎</div>
+        <h3 class="feature-title">Fresh Fruits</h3>
+        <p class="feature-desc">Fruit varieties, orchard sources, size grades, packaging types, and harvest season calendar.</p>
+      </div>
+      <div class="feature-card reveal d3">
+        <div class="feature-icon">🧂</div>
+        <h3 class="feature-title">Salt Products</h3>
+        <p class="feature-desc">Salt types, purity specifications, granule sizes, available certifications, and packaging formats.</p>
+      </div>
+      <div class="feature-card reveal d4">
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">Packaging Info</h3>
+        <p class="feature-desc">Standard and custom packaging options, carton dimensions, pallet configurations, and labelling requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="product-page-cta" aria-label="Contact for catalogue">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="product-page-cta-title">Have Specific Requirements?</h2>
+      <p class="product-page-cta-sub">Contact us directly and our team will help you find exactly what you need.</p>
+      <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="catalogue-cta-btn">
+        Contact Us
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

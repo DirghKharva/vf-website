@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block meta_desc %}VF Agri Export — India's premium B2B agricultural exporter. Fresh vegetables, fruits, and salt sourced from trusted farms, delivered to global markets.{% endblock %}
+
+{% block content %}
+
+<!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+<section class="hero" id="hero"
+  style="background-image: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1920&q=80');">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Premium Agricultural Exports
+      </div>
+
+      <h1 class="hero-title">
+        From India's Finest<br>Farms to the <span>World</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Premium quality fresh vegetables, fruits, and salt — sourced directly from trusted farms and export-ready for global markets.
+      </p>
+
+      <div class="hero-cta">
+        <a href="{{ url_for('products') }}" class="btn btn-primary btn-lg" id="hero-explore-btn">
+          Explore Products
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline btn-lg" id="hero-contact-btn">
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    Scroll
+  </div>
+</section>
+
+<!-- ══════════════════════════════ STATS BAR ══════════════════════════ -->
+<section class="stats-bar" aria-label="Company statistics">
+  <div class="container">
+    <div class="stats-grid">
+
+      <div class="stat-item reveal d1">
+        <div class="stat-number">
+          <span data-count="10" data-suffix="+">10+</span>
+        </div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+
+      <div class="stat-item reveal d2">
+        <div class="stat-number">
+          <span data-count="20" data-suffix="+">20+</span>
+        </div>
+        <div class="stat-label">Export Countries</div>
+      </div>
+
+      <div class="stat-item reveal d3">
+        <div class="stat-number">
+          <span data-count="500" data-suffix="+">500+</span>
+        </div>
+        <div class="stat-label">Tonnes Exported</div>
+      </div>
+
+      <div class="stat-item reveal d4">
+        <div class="stat-number">
+          <span data-count="100" data-suffix="%">100%</span>
+        </div>
+        <div class="stat-label">Quality Assured</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ ABOUT PREVIEW ══════════════════════ -->
+<section class="about-preview section" id="about-preview" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-preview-grid">
+
+      <!-- Text -->
+      <div class="about-preview-text reveal-left">
+        <span class="section-label">About VF Agri Export</span>
+        <h2 class="section-title" id="about-heading">
+          Cultivating Excellence,<br>Delivering Quality
+        </h2>
+        <p>
+          VF Agri Export is a trusted name in the agricultural export industry, committed to bridging India's finest farms with global markets. We specialize in premium fresh vegetables, fruits, and salt — all sourced from carefully vetted, sustainable farms.
+        </p>
+        <p>
+          Our journey began with a simple belief: the world deserves the best of what India grows. With over a decade of experience in agricultural trade, we have built lasting relationships with buyers across 20+ countries, always delivering on our promise of quality and reliability.
+        </p>
+        <p>
+          Every product that leaves our facility meets strict quality standards — from farm inspection to packaging and export documentation. We are more than an exporter; we are your trusted agricultural partner.
+        </p>
+        <div class="about-preview-cta">
+          <a href="{{ url_for('about') }}" class="btn btn-green" id="about-learnmore-btn">Learn Our Story</a>
+          <a href="{{ url_for('contact') }}" class="btn btn-outline-dark" id="about-contact-btn">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="about-preview-image reveal-right">
+        <div class="about-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=80"
+               alt="Fresh colorful produce from VF Agri Export farms"
+               class="about-img-main"
+               loading="lazy">
+          <div class="about-tag">
+            <span class="about-tag-num">10+</span>
+            <span class="about-tag-lbl">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ PRODUCTS SECTION ═══════════════════ -->
+<section class="products-section section" id="products-home" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">What We Export</span>
+      <h2 class="section-title" id="products-heading">Our Product Categories</h2>
+      <p class="section-subtitle">
+        Three core categories. Consistent quality. Global delivery.
+      </p>
+    </div>
+
+    <div class="product-cards-grid">
+
+      <!-- Fresh Vegetables -->
+      <a href="{{ url_for('fresh_vegetables') }}" class="product-card reveal d1" id="card-vegetables" aria-label="Explore Fresh Vegetables">
+        <div class="product-card-bg"
+             style="background-image: url('https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 01</span>
+          <h3 class="product-card-title">Fresh Vegetables</h3>
+          <p class="product-card-desc">
+            Farm-fresh onions, potatoes, tomatoes, garlic, green chillies, ginger and more — sorted, graded, and export-ready.
+          </p>
+          <span class="product-card-arrow">
+            Explore Range
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Fresh Fruits -->
+      <a href="{{ url_for('fresh_fruits') }}" class="product-card reveal d2" id="card-fruits" aria-label="Explore Fresh Fruits">
+        <div class="product-card-bg"
+             style="background-image: url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 02</span>
+          <h3 class="product-card-title">Fresh Fruits</h3>
+          <p class="product-card-desc">
+            Premium mangoes, pomegranates, grapes, bananas, oranges and seasonal fruits from India's best orchards.
+          </p>
+          <span class="product-card-arrow">
+            Explore Range
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Salt -->
+      <a href="{{ url_for('salt') }}" class="product-card reveal d3" id="card-salt" aria-label="Explore Salt Products">
+        <div class="product-card-bg"
+             style="background-image: url('https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 03</span>
+          <h3 class="product-card-title">Salt</h3>
+          <p class="product-card-desc">
+            Premium rock salt, sea salt, table salt, and Himalayan pink salt — processed to international purity standards.
+          </p>
+          <span class="product-card-arrow">
+            Explore Range
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ WHY CHOOSE US ══════════════════════ -->
+<section class="why-us section" id="why-us" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Why Choose VF Agri Export</span>
+      <h2 class="section-title" id="why-heading">Your Trusted Export Partner</h2>
+      <p class="section-subtitle">
+        We combine agricultural expertise with global trade know-how to deliver an unmatched export experience.
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card reveal d1" id="feat-fresh">
+        <div class="feature-icon">🌱</div>
+        <h3 class="feature-title">Farm Fresh</h3>
+        <p class="feature-desc">
+          Products sourced directly from vetted farms. No middlemen — maximum freshness from field to port.
+        </p>
+      </div>
+
+      <div class="feature-card reveal d2" id="feat-quality">
+        <div class="feature-icon">✅</div>
+        <h3 class="feature-title">Quality Certified</h3>
+        <p class="feature-desc">
+          Every batch is rigorously inspected and graded to meet international quality standards before export.
+        </p>
+      </div>
+
+      <div class="feature-card reveal d3" id="feat-export">
+        <div class="feature-icon">🌍</div>
+        <h3 class="feature-title">Export Ready</h3>
+        <p class="feature-desc">
+          Complete export documentation, phytosanitary certificates, and global logistics handled end-to-end.
+        </p>
+      </div>
+
+      <div class="feature-card reveal d4" id="feat-delivery">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">On-Time Delivery</h3>
+        <p class="feature-desc">
+          Reliable supply chain management to ensure your shipments arrive on schedule, every time.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CTA BANNER ════════════════════════ -->
+<section class="cta-banner" id="cta-banner" aria-label="Call to action"
+  style="background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&q=80');">
+  <div class="container">
+    <div class="cta-banner-inner reveal">
+      <p class="cta-banner-quote">
+        "In every shipment, there's a story of <span>dedication</span>, quality, and flavor waiting to be discovered."
+      </p>
+      <p class="cta-banner-sub">
+        Partner with VF Agri Export and bring the best of India's harvest to your market.
+      </p>
+      <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="cta-quote-btn">
+        Request a Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CONTACT QUICK ══════════════════════ -->
+<section class="contact-quick section" id="contact-preview" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Reach Out</span>
+      <h2 class="section-title" id="contact-heading">Ready to Do Business?</h2>
+      <p class="section-subtitle">
+        Get in touch through your preferred channel — we respond fast.
+      </p>
+    </div>
+
+    <div class="contact-cards">
+
+      <div class="contact-card reveal d1" id="contact-phone-card">
+        <div class="contact-card-icon">📞</div>
+        <span class="contact-card-lbl">Call Us</span>
+        <div class="contact-card-title">Phone</div>
+        <div class="contact-card-val">+91 XXXXX XXXXX</div>
+      </div>
+
+      <div class="contact-card reveal d2" id="contact-email-card">
+        <div class="contact-card-icon">✉️</div>
+        <span class="contact-card-lbl">Email Us</span>
+        <div class="contact-card-title">Email</div>
+        <div class="contact-card-val">info@vfagriexport.com</div>
+      </div>
+
+      <div class="contact-card reveal d3" id="contact-wa-card">
+        <div class="contact-card-icon">💬</div>
+        <span class="contact-card-lbl">WhatsApp</span>
+        <div class="contact-card-title">Quick Chat</div>
+        <div class="contact-card-val">+91 XXXXX XXXXX</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

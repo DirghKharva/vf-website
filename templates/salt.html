@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Salt{% endblock %}
+{% block meta_desc %}Premium export-grade salt from VF Agri Export — Rock Salt, Sea Salt, Table Salt, and Himalayan Pink Salt. Processed to international purity standards.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="Salt page header">
+  <div class="container">
+    <span class="page-hero-label">Category 03</span>
+    <h1 class="page-hero-title">Salt</h1>
+    <p class="page-hero-subtitle">Premium quality salt products — natural, processed, and export-ready.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="{{ url_for('products') }}">Products</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Salt</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ PRODUCTS GRID ══════ -->
+<section class="section section-cream" aria-labelledby="salt-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What We Export</span>
+      <h2 class="section-title" id="salt-heading">Our Salt Range</h2>
+      <p class="section-subtitle">
+        Sourced and processed in India, meeting international food-grade purity standards. Available in bulk, retail, and custom packaging.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-item reveal d1" id="prod-rock-salt">
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80"
+             alt="Himalayan Pink Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Himalayan Pink Salt</h3>
+          <p class="product-item-desc">Hand-mined from ancient salt deposits. Rich in trace minerals with its characteristic pink color. Available in various granule sizes.</p>
+          <div class="product-tags">
+            <span class="product-tag">Natural</span>
+            <span class="product-tag">Pink</span>
+            <span class="product-tag">Mineral Rich</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-sea-salt">
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80"
+             alt="Sea Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Sea Salt</h3>
+          <p class="product-item-desc">Solar-evaporated sea salt from India's coastal salt pans. Available in fine, coarse, and flake form for culinary and industrial use.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fine</span>
+            <span class="product-tag">Coarse</span>
+            <span class="product-tag">Flakes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-table-salt">
+        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&q=80"
+             alt="Refined Table Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Refined Table Salt</h3>
+          <p class="product-item-desc">Highly purified, iodized or non-iodized table salt meeting food-grade specifications. Available in various packaging formats.</p>
+          <div class="product-tags">
+            <span class="product-tag">Iodized</span>
+            <span class="product-tag">Non-Iodized</span>
+            <span class="product-tag">Food Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-rock-crystal">
+        <img src="https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=600&q=80"
+             alt="Rock Salt Crystals" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Rock Salt</h3>
+          <p class="product-item-desc">Natural rock salt crystals in white and off-white grades. Used in food, agriculture, water softening, and industrial applications.</p>
+          <div class="product-tags">
+            <span class="product-tag">White</span>
+            <span class="product-tag">Industrial</span>
+            <span class="product-tag">Bulk Available</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Packaging Info -->
+    <div class="reveal" style="margin-top:3rem; background:var(--white); border-radius:var(--radius-xl); padding:2.5rem; border:1px solid var(--border);">
+      <h3 style="font-family:var(--font-heading); font-size:var(--text-2xl); color:var(--primary); margin-bottom:1rem;">Packaging Options</h3>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center;">
+        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🥄</div>
+          <strong style="color:var(--primary);">250g / 500g</strong>
+          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Retail Pouches</p>
+        </div>
+        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🫙</div>
+          <strong style="color:var(--primary);">1kg / 2kg</strong>
+          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Consumer Packs</p>
+        </div>
+        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📦</div>
+          <strong style="color:var(--primary);">25kg / 50kg</strong>
+          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Bags / Sacks</p>
+        </div>
+        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🚢</div>
+          <strong style="color:var(--primary);">Bulk</strong>
+          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Container Loads</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="product-page-cta" aria-label="Request a quote for salt">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="product-page-cta-title">Looking for Premium Salt Supply?</h2>
+      <p class="product-page-cta-sub">Tell us your grade, quantity, packaging, and destination — we'll provide a detailed quotation.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="salt-quote-btn">
+          Request a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="{{ url_for('catalogue') }}" class="btn btn-outline btn-lg" id="salt-catalogue-btn">
+          Download Catalogue
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

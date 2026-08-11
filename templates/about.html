@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+{% block meta_desc %}Learn about VF Agri Export — our story, mission, vision, and values. A decade of delivering premium agricultural products from India's finest farms to global markets.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="About page header">
+  <div class="container">
+    <span class="page-hero-label">Our Company</span>
+    <h1 class="page-hero-title">About VF Agri Export</h1>
+    <p class="page-hero-subtitle">A decade of trust, quality, and agricultural excellence.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>About</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ STORY SECTION ══════ -->
+<section class="about-story section section-white" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="about-story-grid">
+      <div class="reveal-left">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title" id="story-heading">
+          Cultivating Goodness,<br>Exporting Excellence
+        </h2>
+        <p>
+          VF Agri Export was founded with a clear purpose: to connect India's exceptional agricultural produce with buyers around the world. What started as a small venture with a handful of vegetable exports has grown into a trusted B2B export partner for buyers across 20+ countries.
+        </p>
+        <p>
+          We specialize in fresh vegetables, fresh fruits, and premium salt — three categories where we have built deep farm relationships, strong quality systems, and reliable export logistics.
+        </p>
+        <p>
+          Our approach is straightforward: work directly with farmers, inspect rigorously, package carefully, and deliver on time. No compromises. Every pallet that ships from our facility carries the trust of every farmer who grew it.
+        </p>
+        <p>
+          Over the years, we've earned a reputation for consistency, transparency, and the kind of quality that makes buyers come back season after season.
+        </p>
+      </div>
+      <div class="reveal-right">
+        <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=900&q=80"
+             alt="Colorful fresh produce — the heart of VF Agri Export"
+             class="about-story-img"
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MISSION & VISION ══════ -->
+<section class="section section-cream" aria-labelledby="mv-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Our Direction</span>
+      <h2 class="section-title" id="mv-heading">Mission & Vision</h2>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card mission reveal-left">
+        <span class="mv-lbl">Our Mission</span>
+        <h3 class="mv-title">Delivering Farm-Fresh Quality to the World</h3>
+        <p class="mv-text">
+          To source and export the finest agricultural produce from India's most trusted farms, ensuring our global buyers receive consistent quality, transparent trade, and reliable delivery — every single time.
+        </p>
+      </div>
+      <div class="mv-card vision reveal-right">
+        <span class="mv-lbl">Our Vision</span>
+        <h3 class="mv-title">India's Most Trusted Agri Export Brand</h3>
+        <p class="mv-text">
+          To be recognized globally as India's most reliable agricultural export partner — known for premium quality, ethical sourcing, and the ability to meet any buyer's needs with precision and care.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VALUES ══════ -->
+<section class="section section-white" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">What We Stand For</span>
+      <h2 class="section-title" id="values-heading">Our Core Values</h2>
+      <p class="section-subtitle">
+        Six principles that guide every farm visit, every shipment, every conversation.
+      </p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal d1" id="val-quality">
+        <div class="value-icon">🏆</div>
+        <h3 class="value-title">Quality First</h3>
+        <p class="value-desc">Every product is inspected, graded, and certified before it leaves our hands. No exceptions.</p>
+      </div>
+      <div class="value-card reveal d2" id="val-integrity">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-title">Integrity</h3>
+        <p class="value-desc">Honest pricing, accurate specifications, and complete transparency in every business relationship.</p>
+      </div>
+      <div class="value-card reveal d3" id="val-farmer">
+        <div class="value-icon">🌾</div>
+        <h3 class="value-title">Farmer Partnership</h3>
+        <p class="value-desc">We pay fair prices and maintain long-term relationships with our farming partners to ensure sustainable supply.</p>
+      </div>
+      <div class="value-card reveal d1" id="val-global">
+        <div class="value-icon">🌍</div>
+        <h3 class="value-title">Global Thinking</h3>
+        <p class="value-desc">We understand global market requirements and adapt our products and packaging to meet diverse buyer needs.</p>
+      </div>
+      <div class="value-card reveal d2" id="val-reliability">
+        <div class="value-icon">⏰</div>
+        <h3 class="value-title">Reliability</h3>
+        <p class="value-desc">Committed delivery timelines, consistent supply volumes, and proactive communication — always.</p>
+      </div>
+      <div class="value-card reveal d3" id="val-sustain">
+        <div class="value-icon">♻️</div>
+        <h3 class="value-title">Sustainability</h3>
+        <p class="value-desc">Supporting environmentally responsible farming and minimizing waste across our entire supply chain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ STATS ══════ -->
+<section class="stats-bar" aria-label="Company milestones">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal d1">
+        <div class="stat-number"><span data-count="10" data-suffix="+">10+</span></div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat-item reveal d2">
+        <div class="stat-number"><span data-count="20" data-suffix="+">20+</span></div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-item reveal d3">
+        <div class="stat-number"><span data-count="500" data-suffix="+">500+</span></div>
+        <div class="stat-label">Tonnes Exported</div>
+      </div>
+      <div class="stat-item reveal d4">
+        <div class="stat-number"><span data-count="100" data-suffix="%">100%</span></div>
+        <div class="stat-label">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="section section-cream" style="text-align:center;" aria-label="Contact call to action">
+  <div class="container">
+    <div class="reveal" style="max-width:600px; margin:0 auto;">
+      <span class="section-label">Work With Us</span>
+      <h2 class="section-title">Ready to Partner with VF Agri Export?</h2>
+      <p class="section-subtitle" style="margin:0 auto 2rem;">
+        Get in touch today and let's discuss how we can supply your market with premium Indian agricultural products.
+      </p>
+      <a href="{{ url_for('contact') }}" class="btn btn-green btn-lg" id="about-cta-btn">
+        Start a Conversation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

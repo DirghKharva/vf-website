@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Fresh Fruits{% endblock %}
+{% block meta_desc %}Export-grade fresh fruits from VF Agri Export — Mango, Pomegranate, Grapes, Banana, Orange and more. Premium quality from India's orchards.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="Fresh Fruits page header">
+  <div class="container">
+    <span class="page-hero-label">Category 02</span>
+    <h1 class="page-hero-title">Fresh Fruits</h1>
+    <p class="page-hero-subtitle">India's finest orchard fruits — premium quality, globally exported.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="{{ url_for('products') }}">Products</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Fresh Fruits</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ PRODUCTS GRID ══════ -->
+<section class="section section-cream" aria-labelledby="fruits-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What We Export</span>
+      <h2 class="section-title" id="fruits-heading">Our Fruit Range</h2>
+      <p class="section-subtitle">
+        Seasonal and year-round fruits sourced from India's best orchards. Contact us for availability and pricing.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-item reveal d1" id="prod-mango">
+        <img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?w=600&q=80"
+             alt="Fresh Export Mangoes" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Mango</h3>
+          <p class="product-item-desc">Alphonso, Kesar, Totapuri, and Banganapalli varieties. The pride of Indian agriculture — exported fresh worldwide.</p>
+          <div class="product-tags">
+            <span class="product-tag">Alphonso</span>
+            <span class="product-tag">Kesar</span>
+            <span class="product-tag">Totapuri</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-pomegranate">
+        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+             alt="Fresh Pomegranates" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Pomegranate</h3>
+          <p class="product-item-desc">Bhagwa and Ganesh variety pomegranates — bright red arils, sweet-tart flavor, packed in export cartons.</p>
+          <div class="product-tags">
+            <span class="product-tag">Bhagwa</span>
+            <span class="product-tag">Ganesh</span>
+            <span class="product-tag">Premium Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-grapes">
+        <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=600&q=80"
+             alt="Fresh Export Grapes" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Grapes</h3>
+          <p class="product-item-desc">Thompson Seedless, Sharad Seedless, and Red Globe varieties from Nashik's prime vineyards.</p>
+          <div class="product-tags">
+            <span class="product-tag">Thompson Seedless</span>
+            <span class="product-tag">Red Globe</span>
+            <span class="product-tag">Nashik</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-banana">
+        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80"
+             alt="Fresh Export Bananas" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Banana</h3>
+          <p class="product-item-desc">Cavendish and Robusta varieties. Available green or partially ripened per buyer requirement.</p>
+          <div class="product-tags">
+            <span class="product-tag">Cavendish</span>
+            <span class="product-tag">Robusta</span>
+            <span class="product-tag">Export Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-orange">
+        <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=600&q=80"
+             alt="Fresh Export Oranges" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Orange</h3>
+          <p class="product-item-desc">Nagpur mandarin oranges — India's most famous citrus, known for sweetness and juiciness.</p>
+          <div class="product-tags">
+            <span class="product-tag">Nagpur Mandarin</span>
+            <span class="product-tag">Seedless</span>
+            <span class="product-tag">Seasonal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-apple">
+        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=600&q=80"
+             alt="Fresh Export Apples" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Apple</h3>
+          <p class="product-item-desc">Kashmiri and Himachal Pradesh apples — crisp, sweet, and export-graded from high-altitude orchards.</p>
+          <div class="product-tags">
+            <span class="product-tag">Kashmiri</span>
+            <span class="product-tag">Himachali</span>
+            <span class="product-tag">Export Grade A</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:3rem; padding:2rem; background:var(--white); border-radius:var(--radius-xl); border:1px dashed var(--border);">
+      <p style="font-size:var(--text-base); color:var(--text-muted); margin-bottom:0.5rem;">
+        🍊 Additional fruits available depending on season. Enquire for full seasonal calendar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="product-page-cta" aria-label="Request a quote for fruits">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="product-page-cta-title">Ready to Import Indian Fruits?</h2>
+      <p class="product-page-cta-sub">Contact us with your requirements — product, volume, destination, and packaging needs.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="fruits-quote-btn">
+          Request a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="{{ url_for('catalogue') }}" class="btn btn-outline btn-lg" id="fruits-catalogue-btn">
+          Download Catalogue
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

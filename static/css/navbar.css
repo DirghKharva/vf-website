@@ -1,0 +1,207 @@
+/* ============================================================
+   VF AGRI EXPORT — Navbar Styles
+   navbar.css
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  transition: var(--t);
+}
+
+.navbar.scrolled {
+  background: var(--white);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+}
+
+.nav-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* ---- Logo ---- */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.nav-logo-img { height: 46px; width: auto; }
+
+/* Fallback text logo if image not present */
+.nav-logo-text { display: flex; flex-direction: column; }
+.nav-logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+.nav-logo-sub {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ---- Nav Menu ---- */
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+.nav-item { position: relative; }
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text);
+  border-radius: var(--radius);
+  white-space: nowrap;
+  transition: var(--t);
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  background: rgba(27,67,50,0.07);
+}
+.nav-link.active { font-weight: 600; }
+
+.nav-arrow {
+  font-size: 0.55rem;
+  opacity: 0.55;
+  transition: transform 0.28s ease;
+}
+.nav-dropdown:hover .nav-arrow { transform: rotate(180deg); opacity: 1; }
+
+/* ---- Dropdown ---- */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+  min-width: 230px;
+  padding: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 200;
+}
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -5.5px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 11px; height: 11px;
+  background: var(--white);
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text);
+  border-radius: var(--radius);
+  transition: var(--t);
+}
+.dropdown-item:hover {
+  background: rgba(27,67,50,0.07);
+  color: var(--primary);
+  transform: translateX(5px);
+}
+.dropdown-item-icon { font-size: 1.1rem; width: 28px; text-align: center; }
+
+/* ---- Contact CTA in Nav ---- */
+.nav-cta {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 0.58rem 1.3rem !important;
+  font-weight: 600 !important;
+  margin-left: 0.5rem;
+}
+.nav-cta:hover {
+  background: var(--primary-light) !important;
+  color: var(--white) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-green);
+}
+
+/* ---- Hamburger ---- */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px; height: 42px;
+  padding: 8px;
+  border-radius: var(--radius);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--t);
+}
+.nav-hamburger:hover { background: rgba(27,67,50,0.08); }
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--t);
+  transform-origin: center;
+}
+/* → X state */
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ---- Overlay ---- */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.nav-overlay.visible { opacity: 1; }

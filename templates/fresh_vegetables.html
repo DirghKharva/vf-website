@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}Fresh Vegetables{% endblock %}
+{% block meta_desc %}Export-grade fresh vegetables from VF Agri Export — Onion, Potato, Tomato, Garlic, Green Chilli, Ginger and more. Premium quality from India's farms.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="Fresh Vegetables page header">
+  <div class="container">
+    <span class="page-hero-label">Category 01</span>
+    <h1 class="page-hero-title">Fresh Vegetables</h1>
+    <p class="page-hero-subtitle">Farm-fresh, export-grade vegetables sourced directly from India's finest fields.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="{{ url_for('products') }}">Products</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Fresh Vegetables</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ PRODUCTS GRID ══════ -->
+<section class="section section-cream" aria-labelledby="veg-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">What We Export</span>
+      <h2 class="section-title" id="veg-heading">Our Vegetable Range</h2>
+      <p class="section-subtitle">
+        All products are available year-round or seasonally. Contact us for current availability, pricing, and MOQ.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-item reveal d1" id="prod-onion">
+        <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&q=80"
+             alt="Fresh Export Onions" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Onion</h3>
+          <p class="product-item-desc">Red and white onions, sorted by size. Available in 5kg, 10kg, 25kg nets and jumbo bags for export.</p>
+          <div class="product-tags">
+            <span class="product-tag">Red Onion</span>
+            <span class="product-tag">White Onion</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-potato">
+        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80"
+             alt="Fresh Export Potatoes" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Potato</h3>
+          <p class="product-item-desc">Fresh potatoes in various grades. Washed, sorted, and packed in cartons or mesh bags per buyer specification.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Washed</span>
+            <span class="product-tag">Multiple Grades</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-tomato">
+        <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?w=600&q=80"
+             alt="Fresh Export Tomatoes" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Tomato</h3>
+          <p class="product-item-desc">Firm, ripe tomatoes packed in ventilated cartons. Suitable for retail and processing markets worldwide.</p>
+          <div class="product-tags">
+            <span class="product-tag">Round</span>
+            <span class="product-tag">Cherry</span>
+            <span class="product-tag">Roma</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-garlic">
+        <img src="https://images.unsplash.com/photo-1615631648086-325025c9e51e?w=600&q=80"
+             alt="Fresh Export Garlic" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Garlic</h3>
+          <p class="product-item-desc">Fresh garlic with strong aroma and flavor profile. Available in fresh or semi-dried form, multiple sizes.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Semi-Dried</span>
+            <span class="product-tag">Bulk Export</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-chilli">
+        <img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=600&q=80"
+             alt="Fresh Green Chilli" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Green Chilli</h3>
+          <p class="product-item-desc">Vibrant, fresh green chillies of various heat profiles. Carefully sorted and packed for export freshness.</p>
+          <div class="product-tags">
+            <span class="product-tag">Mild</span>
+            <span class="product-tag">Hot</span>
+            <span class="product-tag">Extra Hot</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-ginger">
+        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80"
+             alt="Fresh Export Ginger" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Ginger</h3>
+          <p class="product-item-desc">Aromatic, high-oil content fresh ginger sourced from prime growing regions. Available fresh or dried.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Dry</span>
+            <span class="product-tag">Organic Available</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:3rem; padding:2rem; background:var(--white); border-radius:var(--radius-xl); border:1px dashed var(--border);">
+      <p style="font-size:var(--text-base); color:var(--text-muted); margin-bottom:0.5rem;">
+        🌾 More vegetables available based on season and buyer requirement.
+      </p>
+      <p style="font-size:var(--text-sm); color:var(--text-muted);">
+        Contact us to discuss your specific needs, MOQ, and pricing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="product-page-cta" aria-label="Request a quote for vegetables">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="product-page-cta-title">Need Fresh Vegetables for Export?</h2>
+      <p class="product-page-cta-sub">Request a quotation with your required product, quantity, and destination country.</p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="veg-quote-btn">
+          Request a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="{{ url_for('catalogue') }}" class="btn btn-outline btn-lg" id="veg-catalogue-btn">
+          Download Catalogue
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

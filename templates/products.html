@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Our Products{% endblock %}
+{% block meta_desc %}Browse VF Agri Export's product categories — premium fresh vegetables, fresh fruits, and salt. Export-grade quality sourced from India's finest farms.{% endblock %}
+
+{% block extra_head %}
+<style>
+.page-hero { background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80'); }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ══════ PAGE HERO ══════ -->
+<section class="page-hero" aria-label="Products page header">
+  <div class="container">
+    <span class="page-hero-label">What We Offer</span>
+    <h1 class="page-hero-title">Our Products</h1>
+    <p class="page-hero-subtitle">Three categories. Consistent quality. Global reach.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ url_for('home') }}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Products</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════ PRODUCT CATEGORIES ══════ -->
+<section class="section section-white" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Export Categories</span>
+      <h2 class="section-title" id="products-heading">Choose Your Category</h2>
+      <p class="section-subtitle">
+        All products are sourced directly from farms, quality-inspected, and prepared to meet international export standards.
+      </p>
+    </div>
+
+    <!-- Big Category Cards -->
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:2rem;">
+
+      <a href="{{ url_for('fresh_vegetables') }}" class="product-card reveal d1" id="prod-veggies" style="height:480px;" aria-label="Fresh Vegetables category">
+        <div class="product-card-bg" style="background-image: url('https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 01</span>
+          <h3 class="product-card-title">Fresh Vegetables</h3>
+          <p class="product-card-desc">Onion, Potato, Tomato, Garlic, Green Chilli, Ginger and more — farm-fresh, export-grade.</p>
+          <span class="product-card-arrow">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="{{ url_for('fresh_fruits') }}" class="product-card reveal d2" id="prod-fruits" style="height:480px;" aria-label="Fresh Fruits category">
+        <div class="product-card-bg" style="background-image: url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 02</span>
+          <h3 class="product-card-title">Fresh Fruits</h3>
+          <p class="product-card-desc">Mango, Pomegranate, Grapes, Banana, Orange and seasonal fruits from India's orchards.</p>
+          <span class="product-card-arrow">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="{{ url_for('salt') }}" class="product-card reveal d3" id="prod-salt" style="height:480px;" aria-label="Salt category">
+        <div class="product-card-bg" style="background-image: url('https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=900&q=80');"></div>
+        <div class="product-card-body">
+          <span class="product-card-cat">Category 03</span>
+          <h3 class="product-card-title">Salt</h3>
+          <p class="product-card-desc">Rock salt, sea salt, table salt, and Himalayan pink salt — processed to international purity standards.</p>
+          <span class="product-card-arrow">View Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ WHY US ══════ -->
+<section class="why-us section" aria-labelledby="why-products-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Our Promise</span>
+      <h2 class="section-title" id="why-products-heading">Why Our Products Stand Out</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal d1" id="feat-source">
+        <div class="feature-icon">🌿</div>
+        <h3 class="feature-title">Direct Farm Sourcing</h3>
+        <p class="feature-desc">We work directly with farmers — no middlemen — ensuring freshness and fair prices at the source.</p>
+      </div>
+      <div class="feature-card reveal d2" id="feat-grade">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Strict Grading</h3>
+        <p class="feature-desc">Each batch undergoes size, weight, color, and defect inspection. Only top-grade produce is shipped.</p>
+      </div>
+      <div class="feature-card reveal d3" id="feat-pack">
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">Export Packaging</h3>
+        <p class="feature-desc">Professional packaging that meets the import requirements of your country — cartons, nets, bulk bags, and more.</p>
+      </div>
+      <div class="feature-card reveal d4" id="feat-docs">
+        <div class="feature-icon">📋</div>
+        <h3 class="feature-title">Complete Documentation</h3>
+        <p class="feature-desc">All phytosanitary certificates, export permits, and trade documents handled accurately and on time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="product-page-cta" aria-label="Get a quote">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="product-page-cta-title">Interested in our products?</h2>
+      <p class="product-page-cta-sub">Contact us for price lists, availability, and minimum order quantities.</p>
+      <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg" id="products-cta-btn">
+        Request a Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
