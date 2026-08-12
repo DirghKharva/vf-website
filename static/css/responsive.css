@@ -52,7 +52,6 @@
 @media (max-width: 768px) {
   /* Show hamburger */
   .nav-hamburger { display: flex; }
-  .nav-overlay   { display: block; }
 
   /* Slide-in drawer */
   .nav-menu {

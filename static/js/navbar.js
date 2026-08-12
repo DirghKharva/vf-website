@@ -50,14 +50,22 @@
 
   /* ---- Mobile Products accordion ---- */
   function mobileDropHandler(e) {
-    if (window.innerWidth > 768) return;
-    e.preventDefault();
-    const isOpen = dropMenu.classList.toggle('open');
-    const arr = dropLink.querySelector('.nav-arrow');
-    if (arr) arr.style.transform = isOpen ? 'rotate(180deg)' : '';
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!dropMenu) return;
+      var isOpen = dropMenu.classList.toggle('open');
+      if (dropLink) {
+        var arr = dropLink.querySelector('.nav-arrow');
+        if (arr) arr.style.transform = isOpen ? 'rotate(180deg)' : '';
+        dropLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      }
+    }
   }
 
-  if (dropLink) dropLink.addEventListener('click', mobileDropHandler);
+  if (dropLink) {
+    dropLink.addEventListener('click', mobileDropHandler);
+  }
 
   /* ---- Close menu on nav-link click (mobile) ---- */
   document.querySelectorAll(
