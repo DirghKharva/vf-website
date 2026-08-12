@@ -86,29 +86,60 @@
 
   /* Mobile dropdown becomes accordion */
   .dropdown-menu {
-    position: static;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    border-radius: var(--radius);
-    padding: 0.25rem 0 0.5rem 0.75rem;
-    margin-top: 0;
-    background: var(--cream);
-    opacity: 1;
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: var(--radius) !important;
+    padding: 0 0 0 0.75rem !important;
+    margin-top: 0.25rem !important;
+    background: var(--cream) !important;
+    opacity: 0;
     visibility: hidden;
     pointer-events: none;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, visibility 0.3s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, visibility 0.35s ease, padding 0.35s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 100% !important;
   }
-  .dropdown-menu::before { display: none; }
-  .dropdown-menu.open    { visibility: visible; pointer-events: all; max-height: 300px; }
+  .dropdown-menu::before { display: none !important; }
+  .dropdown-menu.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    max-height: 400px !important;
+    padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+  }
+  .dropdown-item {
+    padding: 0.75rem 0.5rem !important;
+    color: var(--text) !important;
+    font-size: var(--text-base) !important;
+    display: flex !important;
+    align-items: center !important;
+  }
 
   .nav-cta {
     text-align: center;
     justify-content: center;
     margin-top: 1rem;
     margin-left: 0 !important;
+  }
+
+  /* Ensure product cards are fully tap-responsive on touch devices */
+  .product-card {
+    display: block !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .product-card * {
+    pointer-events: none !important;
+  }
+  .product-card-desc {
+    max-height: none !important;
+    opacity: 1 !important;
+    margin-bottom: 0.8rem !important;
   }
 
   /* Decorative about borders overflow fix */

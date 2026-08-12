@@ -15,9 +15,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1.1">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}?v=1.1">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}?v=1.1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1.2">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}?v=1.2">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}?v=1.2">
 
   {% block extra_head %}{% endblock %}
 </head>
@@ -219,8 +219,8 @@
 </a>
 
 <!-- JS -->
-<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/navbar.js') }}?v=1.2"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}?v=1.2"></script>
 {% block extra_scripts %}{% endblock %}
 </body>
 </html>
