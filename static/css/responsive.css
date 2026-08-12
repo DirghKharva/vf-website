@@ -16,7 +16,7 @@
   .about-preview-grid,
   .about-story-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-preview-image { order: -1; }
-  .about-img-wrapper  { max-width: 420px; }
+  .about-img-wrapper  { max-width: 480px; margin: 0 auto; }
   .about-img-main     { height: 380px; }
   .about-story-img    { height: 380px; }
 
@@ -25,14 +25,27 @@
   .stat-item:nth-child(3) { border-right: 1px solid var(--border); border-top: 1px solid var(--border); }
   .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
 
-  .product-cards-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  /* product overview grid (products.html) */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-cards-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
   .product-grid       { grid-template-columns: repeat(2, 1fr); }
-  .contact-cards      { grid-template-columns: 1fr; max-width: 380px; margin: 2rem auto 0; }
+  .contact-cards      { grid-template-columns: 1fr; max-width: 100%; margin: 2rem auto 0; }
   .contact-layout     { grid-template-columns: 1fr; }
-  .catalogue-grid     { grid-template-columns: 1fr; max-width: 500px; margin: 2rem auto 0; }
+  .catalogue-grid     { grid-template-columns: 1fr; max-width: 520px; margin: 2rem auto 0; }
   .mv-grid            { grid-template-columns: 1fr; }
   .values-grid        { grid-template-columns: 1fr 1fr; }
   .footer-grid        { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  /* Salt packaging 4→2 cols */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ---- 768px Mobile Nav ---- */
@@ -89,7 +102,7 @@
     transition: max-height 0.3s ease, visibility 0.3s ease;
   }
   .dropdown-menu::before { display: none; }
-  .dropdown-menu.open { visibility: visible; pointer-events: all; max-height: 300px; }
+  .dropdown-menu.open    { visibility: visible; pointer-events: all; max-height: 300px; }
 
   .nav-cta {
     text-align: center;
@@ -97,43 +110,121 @@
     margin-top: 1rem;
     margin-left: 0 !important;
   }
+
+  /* Decorative about borders overflow fix */
+  .about-img-wrapper::before,
+  .about-img-wrapper::after { display: none; }
+
+  /* About tag repositioned */
+  .about-tag {
+    left: 0.75rem;
+    bottom: -0.75rem;
+    padding: 0.85rem 1rem;
+  }
 }
 
 /* ---- 640px Small Mobile ---- */
 @media (max-width: 640px) {
   :root {
     --space-section: 4rem;
-    --container-pad: 1.25rem;
+    --container-pad: 1.1rem;
   }
 
-  .section-title   { font-size: 1.75rem; }
-  .page-hero-title { font-size: 2.25rem; }
+  /* ── Typography ── */
+  .section-title       { font-size: 1.75rem; }
+  .page-hero-title     { font-size: 2rem; }
+  .page-hero-subtitle  { font-size: var(--text-base); }
 
-  .hero-title { font-size: clamp(1.85rem, 8vw, 2.75rem); }
-  .hero-cta   { flex-direction: column; align-items: flex-start; }
-  .hero-cta .btn { max-width: 280px; justify-content: center; }
+  /* ── Hero ── */
+  /* Disable parallax — breaks on iOS Safari */
+  .hero,
+  .cta-banner { background-attachment: scroll; }
 
+  .hero-title     { font-size: clamp(1.85rem, 8vw, 2.75rem); }
+  .hero-badge     { font-size: 0.65rem; padding: 0.35rem 0.85rem; }
+  .hero-subtitle  { font-size: var(--text-base); margin-bottom: 2rem; }
+  .hero-cta       { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+  .hero-cta .btn  { justify-content: center; }
+  .hero-scroll    { display: none; }
+
+  /* ── Stats ── */
+  .stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .stat-item   { padding: 1.25rem 0.75rem; border: 1px solid var(--border); }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) { border-bottom: none; }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(3) { border-right: 1px solid var(--border); }
+  .stat-item:nth-child(2),
+  .stat-item:nth-child(4) { border-right: none; }
   .stat-number { font-size: 2rem; }
+  .stat-label  { font-size: 0.7rem; }
 
-  .about-preview-cta { flex-direction: column; }
-  .about-preview-cta .btn { justify-content: center; }
+  /* ── About preview ── */
+  .about-preview-cta       { flex-direction: column; align-items: stretch; }
+  .about-preview-cta .btn  { justify-content: center; }
+  .about-img-main          { height: 280px; }
+  .about-img-wrapper       { max-width: 100%; }
+  /* Reflow the floating about tag to be inline below the image */
+  .about-tag {
+    position: relative;
+    left: auto; bottom: auto;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: var(--radius);
+    align-self: flex-start;
+  }
+  .about-tag-num { font-size: var(--text-2xl); display: inline; }
+  .about-tag-lbl { display: inline; margin-top: 0; }
 
-  .product-card  { height: 380px; }
-  .product-cards-grid { max-width: 100%; }
+  /* ── Product cards (homepage) ── */
+  .product-card        { height: 350px; }
+  .product-cards-grid  { max-width: 100%; }
+  .product-card-title  { font-size: var(--text-xl); }
 
-  .product-grid  { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
+  /* ── Product detail grid ── */
+  .product-grid     { grid-template-columns: 1fr; max-width: 100%; margin: 0 0 2rem; }
+  .product-item-img { height: 200px; }
 
-  .features-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+  /* Products page category cards */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 
-  .cta-banner-quote { font-size: 1.75rem; }
+  /* Salt packaging (4 cols → 2 cols) */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
 
+  /* ── Features / Why Us ── */
+  .features-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .feature-card  { padding: 2rem 1.5rem; }
+  .feature-title { font-size: var(--text-lg); }
+
+  /* ── CTA Banner ── */
+  .cta-banner         { min-height: 380px; }
+  .cta-banner-quote   { font-size: 1.55rem; }
+  .cta-banner-sub     { font-size: var(--text-base); }
+  .cta-banner-inner .btn { width: 100%; justify-content: center; display: flex; }
+
+  /* ── Contact quick (homepage) ── */
+  .contact-cards { grid-template-columns: 1fr; max-width: 100%; }
+
+  /* ── Contact page ── */
+  .contact-form-card  { padding: 2rem 1.25rem; }
+  .contact-info-card  { padding: 2rem 1.25rem; }
+  .contact-info-title { font-size: 1.6rem; }
+  .contact-form-title { font-size: 1.6rem; }
+  .form-row           { grid-template-columns: 1fr; gap: 0; }
+  #contact-submit-btn { padding: 1rem; font-size: var(--text-base); }
+
+  /* ── Footer ── */
   .footer-grid   { grid-template-columns: 1fr; gap: 2rem; }
-  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-
-  .form-row          { grid-template-columns: 1fr; gap: 1rem; }
-  .contact-form-card { padding: 2rem 1.5rem; }
-  .contact-info-card { padding: 2rem 1.5rem; }
-
   .values-grid { grid-template-columns: 1fr; }
 
   .catalogue-grid { max-width: 100%; }

@@ -41,7 +41,7 @@
     <div class="product-grid">
 
       <div class="product-item reveal d1" id="prod-mango">
-        <img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/mangos.png') }}"
              alt="Fresh Export Mangoes" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Mango</h3>
@@ -55,7 +55,7 @@
       </div>
 
       <div class="product-item reveal d2" id="prod-pomegranate">
-        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/pomogranate.png') }}"
              alt="Fresh Pomegranates" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Pomegranate</h3>
@@ -68,58 +68,156 @@
         </div>
       </div>
 
-      <div class="product-item reveal d3" id="prod-grapes">
-        <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=600&q=80"
-             alt="Fresh Export Grapes" class="product-item-img" loading="lazy">
-        <div class="product-item-body">
-          <h3 class="product-item-name">Grapes</h3>
-          <p class="product-item-desc">Thompson Seedless, Sharad Seedless, and Red Globe varieties from Nashik's prime vineyards.</p>
-          <div class="product-tags">
-            <span class="product-tag">Thompson Seedless</span>
-            <span class="product-tag">Red Globe</span>
-            <span class="product-tag">Nashik</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-item reveal d1" id="prod-banana">
-        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80"
+      <div class="product-item reveal d3" id="prod-banana">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/bananna.png') }}"
              alt="Fresh Export Bananas" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Banana</h3>
-          <p class="product-item-desc">Cavendish and Robusta varieties. Available green or partially ripened per buyer requirement.</p>
+          <p class="product-item-desc">Cavendish and G9 export quality bananas. Carefully harvested and packed in refrigerated containers per global standards.</p>
           <div class="product-tags">
-            <span class="product-tag">Cavendish</span>
-            <span class="product-tag">Robusta</span>
+            <span class="product-tag">Cavendish G9</span>
+            <span class="product-tag">Green / Ripe</span>
             <span class="product-tag">Export Ready</span>
           </div>
         </div>
       </div>
 
-      <div class="product-item reveal d2" id="prod-orange">
-        <img src="https://images.unsplash.com/photo-1547514701-42782101795e?w=600&q=80"
-             alt="Fresh Export Oranges" class="product-item-img" loading="lazy">
+      <div class="product-item reveal d1" id="prod-grapes">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/grapes.png') }}"
+             alt="Fresh Export Grapes" class="product-item-img" loading="lazy">
         <div class="product-item-body">
-          <h3 class="product-item-name">Orange</h3>
-          <p class="product-item-desc">Nagpur mandarin oranges — India's most famous citrus, known for sweetness and juiciness.</p>
+          <h3 class="product-item-name">Grapes</h3>
+          <p class="product-item-desc">Thompson Seedless, Sonaka, Sharad Seedless, and Flame varieties sourced directly from Maharashtra vineyards.</p>
           <div class="product-tags">
-            <span class="product-tag">Nagpur Mandarin</span>
-            <span class="product-tag">Seedless</span>
-            <span class="product-tag">Seasonal</span>
+            <span class="product-tag">Thompson Seedless</span>
+            <span class="product-tag">Black Grapes</span>
+            <span class="product-tag">Sweet & Crisp</span>
           </div>
         </div>
       </div>
 
-      <div class="product-item reveal d3" id="prod-apple">
-        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=600&q=80"
-             alt="Fresh Export Apples" class="product-item-img" loading="lazy">
+      <div class="product-item reveal d2" id="prod-guava">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/guava.png') }}"
+             alt="Fresh Guava" class="product-item-img" loading="lazy">
         <div class="product-item-body">
-          <h3 class="product-item-name">Apple</h3>
-          <p class="product-item-desc">Kashmiri and Himachal Pradesh apples — crisp, sweet, and export-graded from high-altitude orchards.</p>
+          <h3 class="product-item-name">Guava</h3>
+          <p class="product-item-desc">Taiwan Pink and Allahabad Safeda varieties. Aromatic, sweet, nutrient-dense fresh guavas sorted by size.</p>
           <div class="product-tags">
-            <span class="product-tag">Kashmiri</span>
-            <span class="product-tag">Himachali</span>
-            <span class="product-tag">Export Grade A</span>
+            <span class="product-tag">Taiwan Pink</span>
+            <span class="product-tag">Safeda</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-papaya">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/papaya.png') }}"
+             alt="Fresh Papaya" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Papaya</h3>
+          <p class="product-item-desc">Red Lady and Taiwan 786 sweet papayas with vibrant orange-red pulp, rich flavor, and firm skin for long-distance transport.</p>
+          <div class="product-tags">
+            <span class="product-tag">Red Lady</span>
+            <span class="product-tag">High Brix</span>
+            <span class="product-tag">Uniform Size</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-pineapple">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/pinapple.png') }}"
+             alt="Fresh Pineapple" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Pineapple</h3>
+          <p class="product-item-desc">Queen and MD2 golden pineapples with high sweetness, intense aroma, and export-grade crown grooming.</p>
+          <div class="product-tags">
+            <span class="product-tag">MD2 Golden</span>
+            <span class="product-tag">Queen Variety</span>
+            <span class="product-tag">Juicy & Sweet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-dragon-fruit">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/dragon-fruit.png') }}"
+             alt="Fresh Dragon Fruit" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Dragon Fruit</h3>
+          <p class="product-item-desc">Red and white pulp pitahaya grown in India's arid regions. Rich in antioxidants with stunning vibrant peel.</p>
+          <div class="product-tags">
+            <span class="product-tag">Red Pulp</span>
+            <span class="product-tag">White Pulp</span>
+            <span class="product-tag">Exotic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-watermelon">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/watermelon.png') }}"
+             alt="Fresh Watermelon" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Watermelon</h3>
+          <p class="product-item-desc">Kiran and Namdhari seedless / seeded varieties. High sweetness, deep red flesh, and thick rind for safe export handling.</p>
+          <div class="product-tags">
+            <span class="product-tag">Kiran</span>
+            <span class="product-tag">High Sugar</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-muskmelon">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/muskmelon.png') }}"
+             alt="Fresh Muskmelon" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Muskmelon (Cantaloupe)</h3>
+          <p class="product-item-desc">Fragrant, sweet orange-flesh cantaloupes and honeydew melons, graded and cushioned in export cartons.</p>
+          <div class="product-tags">
+            <span class="product-tag">Cantaloupe</span>
+            <span class="product-tag">Sweet Aroma</span>
+            <span class="product-tag">Freshly Harvested</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-chickoo">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/chickoo.png') }}"
+             alt="Fresh Chickoo" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Sapota (Chickoo)</h3>
+          <p class="product-item-desc">Kalipatti and Cricket Ball sapota varieties. Rich malty-caramel sweetness, carefully packed to arrive in prime condition.</p>
+          <div class="product-tags">
+            <span class="product-tag">Kalipatti</span>
+            <span class="product-tag">Caramel Sweet</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-custard-apple">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/custard-apple.png') }}"
+             alt="Fresh Custard Apple" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Custard Apple (Sitaphal)</h3>
+          <p class="product-item-desc">Balanagar and Golden varieties. Creamy texture, rich sugary pulp, harvested at optimal firmness for export flights.</p>
+          <div class="product-tags">
+            <span class="product-tag">Sitaphal</span>
+            <span class="product-tag">Creamy Pulp</span>
+            <span class="product-tag">Select Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-coconut-dry">
+        <img src="{{ url_for('static', filename='images/products/fresh-fruits/coconut-dry.png') }}"
+             alt="Dry Coconut" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Semi-Husked & Dry Coconut</h3>
+          <p class="product-item-desc">Mature coconuts with high oil and water content, cleaned, de-husked, and packed in PP mesh bags for long shelf life.</p>
+          <div class="product-tags">
+            <span class="product-tag">Semi-Husked</span>
+            <span class="product-tag">Dry Copra</span>
+            <span class="product-tag">Bulk Export</span>
           </div>
         </div>
       </div>

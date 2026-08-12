@@ -1,26 +1,59 @@
+# Python / Bytecode
 __pycache__/
 *.py[cod]
+*$py.class
 *.pyo
 *.pyd
 .Python
+
+# Virtual Environments
 env/
 venv/
 .venv/
+myenv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project raw assets / local scratch folders
+pic/
+
+# Packaging / Distribution
 pip-log.txt
+pip-delete-this-directory.txt
 *.egg-info/
+.installed.cfg
+*.egg
 dist/
 build/
 .eggs/
+
+# Environment Variables & Secrets
 .env
 .env.local
+.env.*.local
+*.env
+
+# Databases & Runtime
 instance/
 .webassets-cache
 *.db
 *.sqlite3
 *.log
+
+# OS & Editor files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.swp
 *.swo
+*~
 node_modules/
 .idea/
 .vscode/
+*.sublime-workspace
+

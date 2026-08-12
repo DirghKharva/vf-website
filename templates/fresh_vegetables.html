@@ -41,7 +41,7 @@
     <div class="product-grid">
 
       <div class="product-item reveal d1" id="prod-onion">
-        <img src="https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/onion.png') }}"
              alt="Fresh Export Onions" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Onion</h3>
@@ -55,7 +55,7 @@
       </div>
 
       <div class="product-item reveal d2" id="prod-potato">
-        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/potato.png') }}"
              alt="Fresh Export Potatoes" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Potato</h3>
@@ -69,7 +69,7 @@
       </div>
 
       <div class="product-item reveal d3" id="prod-tomato">
-        <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/tomato.png') }}"
              alt="Fresh Export Tomatoes" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Tomato</h3>
@@ -83,7 +83,7 @@
       </div>
 
       <div class="product-item reveal d1" id="prod-garlic">
-        <img src="https://images.unsplash.com/photo-1615631648086-325025c9e51e?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/garlic.png') }}"
              alt="Fresh Export Garlic" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Garlic</h3>
@@ -97,7 +97,7 @@
       </div>
 
       <div class="product-item reveal d2" id="prod-chilli">
-        <img src="https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/green-chilli.png') }}"
              alt="Fresh Green Chilli" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Green Chilli</h3>
@@ -111,7 +111,7 @@
       </div>
 
       <div class="product-item reveal d3" id="prod-ginger">
-        <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80"
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/ginger.png') }}"
              alt="Fresh Export Ginger" class="product-item-img" loading="lazy">
         <div class="product-item-body">
           <h3 class="product-item-name">Ginger</h3>
@@ -120,6 +120,149 @@
             <span class="product-tag">Fresh</span>
             <span class="product-tag">Dry</span>
             <span class="product-tag">Organic Available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-bhindi">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/bhindi.png') }}"
+             alt="Fresh Bhindi" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Bhindi (Okra)</h3>
+          <p class="product-item-desc">Tender and fresh okra, hand-picked and carefully packed to maintain quality and crispness during transit.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-bitter-gourd">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/bitter-gourd.png') }}"
+             alt="Fresh Bitter Gourd" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Bitter Gourd</h3>
+          <p class="product-item-desc">Premium quality bitter gourd with dark green color and firm texture, suitable for diverse culinary uses.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-bottle-gourd">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/bottel-gourd.png') }}"
+             alt="Fresh Bottle Gourd" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Bottle Gourd</h3>
+          <p class="product-item-desc">Fresh, light green bottle gourds carefully selected for uniform size and unblemished skin.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-carrot">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/carot.png') }}"
+             alt="Fresh Carrots" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Carrot</h3>
+          <p class="product-item-desc">Crunchy, brightly colored fresh carrots, washed and graded for export markets.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Washed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-cluster-beans">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/cluster-beans.png') }}"
+             alt="Fresh Cluster Beans" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Cluster Beans</h3>
+          <p class="product-item-desc">High-quality, tender cluster beans known for their unique flavor, packed to retain maximum freshness.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-drumstick">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/drumstick.png') }}"
+             alt="Fresh Drumstick" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Drumstick (Moringa)</h3>
+          <p class="product-item-desc">Fresh green drumsticks (Moringa oleifera) known for their nutritional value, carefully bundled for export.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Nutrient Rich</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-french-beans">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/french-beans.png') }}"
+             alt="Fresh French Beans" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">French Beans</h3>
+          <p class="product-item-desc">Crisp, bright green french beans, meticulously sorted to ensure uniform length and supreme quality.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-green-beans">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/green-beans.png') }}"
+             alt="Fresh Green Beans" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Green Beans</h3>
+          <p class="product-item-desc">Freshly harvested green beans with excellent snap and tender texture for international culinary markets.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-green-capsicum">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/green-capsicum.png') }}"
+             alt="Fresh Green Capsicum" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Green Capsicum</h3>
+          <p class="product-item-desc">Glossy, thick-walled green capsicums, packed securely to prevent bruising and maintain crunchiness.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-lemon">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/lemon.png') }}"
+             alt="Fresh Lemons" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Lemon</h3>
+          <p class="product-item-desc">Juicy, vibrant yellow lemons with excellent acidity, carefully graded by size and exported globally.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-ridge-gourd">
+        <img src="{{ url_for('static', filename='images/products/fresh-veg/ridge-gourd.png') }}"
+             alt="Fresh Ridge Gourd" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Ridge Gourd</h3>
+          <p class="product-item-desc">Fresh, tender ridge gourds known for their culinary versatility, packed to ensure freshness on arrival.</p>
+          <div class="product-tags">
+            <span class="product-tag">Fresh</span>
+            <span class="product-tag">Export Grade</span>
           </div>
         </div>
       </div>

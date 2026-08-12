@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = 'vf-agri-export-dev-secret-key-change-in-production'
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 # ── Home ──────────────────────────────────────────────────────────────

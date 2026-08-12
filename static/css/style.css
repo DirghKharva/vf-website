@@ -1088,3 +1088,57 @@ input, select, textarea { font-family: inherit; }
   from { transform: translateY(18px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
 }
+
+/* ============================================================
+   UTILITY GRIDS (replaces inline style grids for responsiveness)
+   ============================================================ */
+
+/* 3-column grid used on products overview and about page */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* 4-column packaging grid on salt page */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+/* ============================================================
+   MOBILE OVERFLOW PREVENTION
+   ============================================================ */
+
+/* Prevent any element from exceeding viewport */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Safe images on all devices */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent text overflow in any container */
+.hero-title,
+.section-title,
+.page-hero-title,
+.product-card-title,
+.product-item-name {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  .btn { min-height: 48px; }
+  .nav-link { min-height: 48px; }
+  .dropdown-item { min-height: 48px; }
+  .social-link { min-height: 44px; min-width: 44px; }
+}
+
