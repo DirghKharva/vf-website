@@ -52,6 +52,11 @@
 @media (max-width: 768px) {
   /* Show hamburger */
   .nav-hamburger { display: flex; }
+  
+  /* Mobile Logo Size adjustments */
+  .nav-logo-img { height: 44px; }
+  .nav-logo-name { font-size: 1.15rem; }
+  .nav-logo-sub { font-size: 0.58rem; }
 
   /* Slide-in drawer */
   .nav-menu {
