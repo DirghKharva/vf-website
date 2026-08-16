@@ -50,11 +50,15 @@
 
 /* ---- 768px Mobile Nav ---- */
 @media (max-width: 768px) {
+  :root {
+    --nav-height: 72px;
+  }
+
   /* Show hamburger */
   .nav-hamburger { display: flex; }
   
   /* Mobile Logo Size adjustments */
-  .nav-logo-img { height: 44px; }
+  .nav-logo-img { height: 48px; }
   .nav-logo-name { font-size: 1.15rem; }
   .nav-logo-sub { font-size: 0.58rem; }
 
