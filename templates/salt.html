@@ -40,58 +40,128 @@
 
     <div class="product-grid">
 
-      <div class="product-item reveal d1" id="prod-rock-salt">
-        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80"
-             alt="Himalayan Pink Salt" class="product-item-img" loading="lazy">
+      <div class="product-item reveal d1" id="prod-raw-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/raw-salt.png') }}"
+             alt="Raw Salt" class="product-item-img" loading="lazy">
         <div class="product-item-body">
-          <h3 class="product-item-name">Himalayan Pink Salt</h3>
-          <p class="product-item-desc">Hand-mined from ancient salt deposits. Rich in trace minerals with its characteristic pink color. Available in various granule sizes.</p>
+          <h3 class="product-item-name">Raw Salt</h3>
+          <p class="product-item-desc">Unprocessed natural sea salt harvested from India's prime salt fields, ideal for industrial processing and chlor-alkali industries.</p>
           <div class="product-tags">
             <span class="product-tag">Natural</span>
-            <span class="product-tag">Pink</span>
+            <span class="product-tag">Industrial Grade</span>
+            <span class="product-tag">Bulk Export</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-refined-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/refined-salt.png') }}"
+             alt="Refined Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Refined Salt</h3>
+          <p class="product-item-desc">High-purity washed and processed salt, manufactured to meet demanding requirements of food and chemical processing industries.</p>
+          <div class="product-tags">
+            <span class="product-tag">Refined</span>
+            <span class="product-tag">Purity</span>
+            <span class="product-tag">Food & Industrial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-refined-iodised-free-flow-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/refined-iodised-free-flow-salt.png') }}"
+             alt="Refined Iodised Free Flow Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Refined Iodised Free Flow Salt</h3>
+          <p class="product-item-desc">Premium edible salt, fortified with potassium iodate. Triple-refined and processed for excellent free-flowing properties and even distribution.</p>
+          <div class="product-tags">
+            <span class="product-tag">Iodised</span>
+            <span class="product-tag">Free Flow</span>
+            <span class="product-tag">Edible Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-crystal-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/crystal-salt.png') }}"
+             alt="Crystal Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Crystal Salt</h3>
+          <p class="product-item-desc">Coarse white natural salt crystals, sun-dried to lock in essential trace minerals. Ideal for traditional cooking and pickling applications.</p>
+          <div class="product-tags">
+            <span class="product-tag">Natural Crystals</span>
             <span class="product-tag">Mineral Rich</span>
+            <span class="product-tag">Culinary</span>
           </div>
         </div>
       </div>
 
-      <div class="product-item reveal d2" id="prod-sea-salt">
-        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600&q=80"
-             alt="Sea Salt" class="product-item-img" loading="lazy">
+      <div class="product-item reveal d2" id="prod-crystal-iodised-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/crystal-iodised-salt.png') }}"
+             alt="Crystal Iodised Salt" class="product-item-img" loading="lazy">
         <div class="product-item-body">
-          <h3 class="product-item-name">Sea Salt</h3>
-          <p class="product-item-desc">Solar-evaporated sea salt from India's coastal salt pans. Available in fine, coarse, and flake form for culinary and industrial use.</p>
+          <h3 class="product-item-name">Crystal Iodised Salt</h3>
+          <p class="product-item-desc">High-quality coarse salt crystals, enriched with essential dietary iodine. Combines traditional crystal texture with nutritional fortification.</p>
           <div class="product-tags">
-            <span class="product-tag">Fine</span>
-            <span class="product-tag">Coarse</span>
-            <span class="product-tag">Flakes</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-item reveal d3" id="prod-table-salt">
-        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=600&q=80"
-             alt="Refined Table Salt" class="product-item-img" loading="lazy">
-        <div class="product-item-body">
-          <h3 class="product-item-name">Refined Table Salt</h3>
-          <p class="product-item-desc">Highly purified, iodized or non-iodized table salt meeting food-grade specifications. Available in various packaging formats.</p>
-          <div class="product-tags">
-            <span class="product-tag">Iodized</span>
-            <span class="product-tag">Non-Iodized</span>
+            <span class="product-tag">Iodised</span>
+            <span class="product-tag">Coarse Crystals</span>
             <span class="product-tag">Food Grade</span>
           </div>
         </div>
       </div>
 
-      <div class="product-item reveal d1" id="prod-rock-crystal">
-        <img src="https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=600&q=80"
-             alt="Rock Salt Crystals" class="product-item-img" loading="lazy">
+      <div class="product-item reveal d3" id="prod-table-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/table-salt.png') }}"
+             alt="Table Salt" class="product-item-img" loading="lazy">
         <div class="product-item-body">
-          <h3 class="product-item-name">Rock Salt</h3>
-          <p class="product-item-desc">Natural rock salt crystals in white and off-white grades. Used in food, agriculture, water softening, and industrial applications.</p>
+          <h3 class="product-item-name">Table Salt</h3>
+          <p class="product-item-desc">Standard food-grade free-flowing iodized salt, perfectly granulated for household culinary uses, seasoning, and packaging.</p>
           <div class="product-tags">
-            <span class="product-tag">White</span>
-            <span class="product-tag">Industrial</span>
-            <span class="product-tag">Bulk Available</span>
+            <span class="product-tag">Iodised</span>
+            <span class="product-tag">Household</span>
+            <span class="product-tag">Standard Grade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d1" id="prod-industrial-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/industrial-salt.png') }}"
+             alt="Industrial Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Industrial Salt</h3>
+          <p class="product-item-desc">Engineered salt grades optimized for chemical factories, textile processing, dye manufacturing, and large-scale water treatment systems.</p>
+          <div class="product-tags">
+            <span class="product-tag">High Purity</span>
+            <span class="product-tag">Water Softener</span>
+            <span class="product-tag">Chemical Industry</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d2" id="prod-commercial-salt">
+        <img src="{{ url_for('static', filename='images/products/salt/commercial-salt.png') }}"
+             alt="Commercial Salt" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Commercial Salt</h3>
+          <p class="product-item-desc">Multi-purpose commercial grade salt, extensively used in hide curing, ice making, refrigeration, and animal feed industries.</p>
+          <div class="product-tags">
+            <span class="product-tag">Commercial</span>
+            <span class="product-tag">Multi-use</span>
+            <span class="product-tag">Bulk Pack</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item reveal d3" id="prod-salt-tablet">
+        <img src="{{ url_for('static', filename='images/products/salt/salt-tablet.png') }}"
+             alt="Salt Tablet" class="product-item-img" loading="lazy">
+        <div class="product-item-body">
+          <h3 class="product-item-name">Salt Tablet</h3>
+          <p class="product-item-desc">High-density compressed salt tablets, specifically formulated for domestic and commercial water softening and regeneration units.</p>
+          <div class="product-tags">
+            <span class="product-tag">Compressed</span>
+            <span class="product-tag">Purity 99.5%</span>
+            <span class="product-tag">Water Treatment</span>
           </div>
         </div>
       </div>
