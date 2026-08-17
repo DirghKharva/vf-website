@@ -43,8 +43,8 @@ The project has 9 active pages:
     *   Updated with Minerock Impex's custom vision and mission (17+ years experience).
     *   **Automatic Slideshow:** The main team image block runs an automatic crossfade slideshow switching between `slide-1.jpg` and `slide-2.jpg` (found in `static/images/about/`) at 4-second intervals using custom CSS opacity and vanilla JS.
 3.  **Products Overview (`/products`):** Highlighting major category portals.
-4.  **Fresh Vegetables Category (`/products/fresh-vegetables`):** Shows 14 items with custom descriptions.
-5.  **Fresh Fruits Category (`/products/fresh-fruits`):** Shows 13 items with custom descriptions.
+4.  **Fresh Vegetables Category (`/products/fresh-vegetables`):** Shows 16 items with custom descriptions.
+5.  **Fresh Fruits Category (`/products/fresh-fruits`):** Shows 12 items with custom descriptions.
 6.  **Salt Category (`/products/salt`):** Showcases raw/edible varieties and packaging models.
 7.  **Catalogue (`/catalogue`):** Downloadable business literature.
 8.  **Contact (`/contact`):** Includes a contact details sidebar and an enquiry form.
