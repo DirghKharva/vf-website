@@ -170,28 +170,39 @@
 
     <!-- Packaging Info -->
     <div class="reveal" style="margin-top:3rem; background:var(--white); border-radius:var(--radius-xl); padding:2.5rem; border:1px solid var(--border);">
-      <h3 style="font-family:var(--font-heading); font-size:var(--text-2xl); color:var(--primary); margin-bottom:1rem;">Packaging Options</h3>
-      <div class="grid-4">
-        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
-          <div style="font-size:2rem; margin-bottom:0.5rem;">🥄</div>
-          <strong style="color:var(--primary);">250g / 500g</strong>
-          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Retail Pouches</p>
+      <h3 style="font-family:var(--font-heading); font-size:var(--text-2xl); color:var(--primary); margin-bottom:1.5rem; text-align: center;">Packaging Options</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        
+        <!-- Consumer Pack -->
+        <div style="background:var(--cream); border-radius:var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--border);">
+          <img src="{{ url_for('static', filename='images/products/salt/consumer-pack.png') }}"
+               alt="Consumer Packs (1kg / 2kg)" style="width: 100%; height: 180px; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.25rem; text-align: center;">
+            <strong style="color:var(--primary); font-size: var(--text-lg); display: block; margin-bottom: 0.25rem;">1kg / 2kg</strong>
+            <p style="font-size:var(--text-sm); color:var(--text-muted); font-weight: 600;">Consumer Packs</p>
+          </div>
         </div>
-        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
-          <div style="font-size:2rem; margin-bottom:0.5rem;">🫙</div>
-          <strong style="color:var(--primary);">1kg / 2kg</strong>
-          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Consumer Packs</p>
+
+        <!-- Bags / Sacks -->
+        <div style="background:var(--cream); border-radius:var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--border);">
+          <img src="{{ url_for('static', filename='images/products/salt/bag-sack-salt.png') }}"
+               alt="Bags / Sacks (20kg / 50kg)" style="width: 100%; height: 180px; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.25rem; text-align: center;">
+            <strong style="color:var(--primary); font-size: var(--text-lg); display: block; margin-bottom: 0.25rem;">20kg / 50kg</strong>
+            <p style="font-size:var(--text-sm); color:var(--text-muted); font-weight: 600;">Bags / Sacks</p>
+          </div>
         </div>
-        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
-          <div style="font-size:2rem; margin-bottom:0.5rem;">📦</div>
-          <strong style="color:var(--primary);">25kg / 50kg</strong>
-          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Bags / Sacks</p>
+
+        <!-- Bulk -->
+        <div style="background:var(--cream); border-radius:var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--border);">
+          <img src="{{ url_for('static', filename='images/products/salt/bulk-salt.png') }}"
+               alt="Bulk (1.4 Ton Jumbo Bags)" style="width: 100%; height: 180px; object-fit: cover;" loading="lazy">
+          <div style="padding: 1.25rem; text-align: center;">
+            <strong style="color:var(--primary); font-size: var(--text-lg); display: block; margin-bottom: 0.25rem;">1.4 Ton Jumbo Bags</strong>
+            <p style="font-size:var(--text-sm); color:var(--text-muted); font-weight: 600;">Container Loads / Bulk</p>
+          </div>
         </div>
-        <div style="padding:1rem; background:var(--cream); border-radius:var(--radius-lg);">
-          <div style="font-size:2rem; margin-bottom:0.5rem;">🚢</div>
-          <strong style="color:var(--primary);">Bulk</strong>
-          <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:0.25rem;">Container Loads</p>
-        </div>
+
       </div>
     </div>
   </div>
