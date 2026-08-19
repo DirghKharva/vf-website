@@ -45,7 +45,7 @@ The project has 9 active pages:
 3.  **Products Overview (`/products`):** Highlighting major category portals.
 4.  **Fresh Vegetables Category (`/products/fresh-vegetables`):** Shows 16 items with custom descriptions.
 5.  **Fresh Fruits Category (`/products/fresh-fruits`):** Shows 12 items with custom descriptions.
-6.  **Salt Category (`/products/salt`):** Showcases raw/edible varieties and packaging models.
+6.  **Salt Category (`/products/salt`):** Showcases 7 raw/edible varieties and 3 visual packaging options (Consumer Packs, Bags/Sacks, and Bulk) using optimized mockup images.
 7.  **Catalogue (`/catalogue`):** Downloadable business literature.
 8.  **Contact (`/contact`):** Includes a contact details sidebar and an enquiry form.
 9.  **404 Page:** Custom error page layout.
